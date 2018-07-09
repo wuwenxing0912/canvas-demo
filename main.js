@@ -34,10 +34,18 @@ download.onclick = function() {
     a.target = '_blank'
     a.click()
 }
-
+black.onclick = function() {
+    context.fillStyle = 'black';
+    context.strokeStyle = 'black';
+    black.classList.add('active');
+    red.classList.remove('active');
+    green.classList.remove('active');
+    blue.classList.remove('active');
+}
 red.onclick = function() {
     context.fillStyle = 'red';
     context.strokeStyle = 'red';
+    black.classList.remove('active');
     red.classList.add('active');
     green.classList.remove('active');
     blue.classList.remove('active');
@@ -46,6 +54,7 @@ red.onclick = function() {
 green.onclick = function() {
     context.fillStyle = 'green';
     context.strokeStyle = 'green';
+    black.classList.remove('active');
     red.classList.remove('active');
     green.classList.add('active');
     blue.classList.remove('active');
@@ -54,6 +63,7 @@ green.onclick = function() {
 blue.onclick = function() {
     context.fillStyle = 'blue';
     context.strokeStyle = 'blue';
+    black.classList.remove('active');
     red.classList.remove('active');
     green.classList.remove('active');
     blue.classList.add('active');
